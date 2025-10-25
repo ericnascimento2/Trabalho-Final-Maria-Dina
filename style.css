@@ -1,0 +1,213 @@
+/* GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF5E4;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+header {
+    background-color: #FBF5E4;
+    color: #70307A;
+    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header a {
+    color: #70307A;
+}
+
+/* NAV */
+nav.main-nav {
+    flex-grow: 1;
+}
+
+nav.main-nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav.main-nav ul li {
+    margin: 0 15px;
+    display: inline;
+}
+
+
+/* UTILIDADE */
+.utility-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* PESQUISA */
+.utility-nav .search-container {
+    position: relative;
+}
+
+.utility-nav .search-container input[type="text"] {
+    border: 1px solid #70307A;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 150px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* IMG */
+.utility-nav .nav-image {
+    width: 44px;
+    height: 44px;
+    vertical-align: middle;
+}
+
+/* CARRINHO */
+.utility-nav .cart-icon:hover {
+    text-decoration: none;
+}
+
+
+/* LOGIN */
+.utility-nav .login-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #70307A;
+    font-weight: bold;
+}
+
+.utility-nav .login-icon {
+    margin-right: 0;
+}
+
+/* --- Conteúdo Principal (Main) --- */
+main {
+    max-width: 1500px;
+    margin: 1rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background-color: #FBF5E4;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.banner {
+    margin-top: 100px;
+    padding: 40px;
+}
+
+/* --- Produtos (Página Inicial) --- */
+#produtos-destaque {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.produto {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.produto img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* --- Formulários (Login, Compra) --- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+form input, form select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- Botões --- */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* --- Carrinho --- */
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}

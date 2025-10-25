@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - Nome da Loja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">Nome da Loja</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Continuar Comprando</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Seu Carrinho de Compras</h2>
+
+        <section id="itens-carrinho">
+            <article class="item">
+                <img src="placeholder.jpg" alt="Produto 1">
+                <div>
+                    <h4>Produto 1</h4>
+                    <p>Preço: R$ 99,90</p>
+                    <label for="quantidade1">Quantidade:</label>
+                    <input type="number" id="quantidade1" value="1" min="1">
+                    <button>Remover</button>
+                </div>
+            </article>
+            
+            <article class="item">
+                <img src="placeholder.jpg" alt="Produto 2">
+                <div>
+                    <h4>Produto 2</h4>
+                    <p>Preço: R$ 149,90</p>
+                    <label for="quantidade2">Quantidade:</label>
+                    <input type="number" id="quantidade2" value="1" min="1">
+                    <button>Remover</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="resumo-carrinho">
+            <h3>Resumo do Pedido</h3>
+            <p>Subtotal: R$ 249,80</p>
+            <p>Frete: A calcular</p>
+            <h4>Total: R$ 249,80</h4>
+            <a href="compra.html"><button>Finalizar Compra</button></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nome da Loja. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
