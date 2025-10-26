@@ -1,10 +1,10 @@
 /* GLOBAL */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Times New Normal";
     margin: 0;
     padding: 0;
-    background-color: #FBF5E4;
-    color: #333;
+    background-color: #F1ECDC;
+    color: #70307A;
 }
 
 a {
@@ -37,6 +37,9 @@ header {
 
 header h1 {
     margin: 0;
+    font-family:"Lobster 1.4";
+    transform: skew(-20deg, -10deg);
+    font-size: 28pt;
 }
 
 header a {
@@ -58,6 +61,7 @@ nav.main-nav ul {
 nav.main-nav ul li {
     margin: 0 15px;
     display: inline;
+    font-size: 14pt;
 }
 
 
@@ -70,7 +74,7 @@ nav.main-nav ul li {
 
 /* PESQUISA */
 .utility-nav .search-container {
-    position: relative;
+    position:relative;
 }
 
 .utility-nav .search-container input[type="text"] {
@@ -85,8 +89,8 @@ nav.main-nav ul li {
 
 /* IMG */
 .utility-nav .nav-image {
-    width: 44px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
 }
 
@@ -206,8 +210,11 @@ button:hover {
 /* --- Rodapé --- */
 footer {
     text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: white;
-    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #70307A;
+    color: #FAF4E3;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position:absolute;
 }
