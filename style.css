@@ -3,7 +3,7 @@ body {
     font-family: "Times New Normal";
     margin: 0;
     padding: 0;
-    background-color: #F1ECDC;
+    background-color: black;
     color: #70307A;
 }
 
@@ -153,8 +153,8 @@ img {
 }
 
 .produto img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     margin-bottom: 1rem;
 }
