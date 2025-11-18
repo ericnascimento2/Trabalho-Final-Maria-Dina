@@ -3,122 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guitas: loja de guitarras premium com Gibson, Fender, Ibanez. Parcelamento em 12x e entrega para todo Brasil.">
     <title>Guitas: som além das cordas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
-     <h1><a href="pginicial.html">Guitas</a></h1>
+    <h1><a href="pginicial.html">Guitas</a></h1>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegação principal">
         <ul>
-            <li><a href="pginicial.html">Início</a></li>
+            <li><a href="pginicial.html" aria-current="page">Início</a></li>
             <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="pginicial.html">Sobre</a></li>
+            <li><a href="pginicial.html">Contato</a></li>
         </ul>
     </nav>
 
     <div class="utility-nav">
-        <a href="#" class="cart-icon">
-            <img src="icones/pesquisar.png" alt="Pesquisar" class="nav-image">
-        </a>
-        <div class="search-container">
-            <input type="text" placeholder="Pesquisar...">
+        <button type="button" class="search-toggle" aria-label="Abrir busca" aria-expanded="false">
+            <img src="icones/pesquisar.png" alt="" class="nav-image">
+        </button>
+        <div class="search-container" id="search-box">
+            <input type="text" id="search-input" placeholder="Pesquisar..." aria-label="Buscar produtos">
         </div>
 
-        <a href="carrinho.html" class="cart-icon">
-            <img src="icones/carrinho.png" alt="Carrinho de Compras" class="nav-image">
+        <a href="carrinho.html" class="cart-icon" aria-label="Carrinho de compras">
+            <img src="icones/carrinho.png" alt="" class="nav-image">
+            <span class="cart-count" id="cart-count">0</span>
         </a>
 
         <a href="login.html" class="login-link">
-            <img src="icones/usuario.png" alt="Acessar Login" class="nav-image login-icon">
+            <img src="icones/usuario.png" alt="" class="nav-image login-icon">
             <span>Login</span>
         </a>
     </div>
 </header>
 
-<!-- Banner principal -->
 <section class="sectionimgbanner">
-  <img 
-    src="imagens\hendrix.jpg"
-    alt="Jimi Hendrix tocando guitarra"
-    class="imgbanner">
+    <img src="imagens/hendrix.jpg" alt="Jimi Hendrix tocando guitarra" class="imgbanner" loading="lazy">
 </section>
 
-<main>
+<main class="wrapper">
 
-  <!-- Sobre a loja -->
-  <div class="sobre-container">
-    <div class="sobre-texto">
-      <p>
-        A <strong class="logo-text">Guitas</strong> nasceu da paixão por instrumentos de corda e pelo som autêntico.
-        Nosso objetivo é conectar músicos a instrumentos de qualidade que inspiram criatividade e expressão.
-      </p>
-      <p>
-        Trabalhamos com marcas consagradas e atendimento especializado para garantir que cada acorde soe como
-        você sempre sonhou.
-      </p>
-    </div>
+    <section class="sobre-container">
+        <div class="sobre-texto">
+            <p>
+                A <strong class="logo-text">Guitas</strong> nasceu da paixão por instrumentos de corda e pelo som autêntico.
+                Nosso objetivo é conectar músicos a instrumentos de qualidade que inspiram criatividade e expressão.
+            </p>
+            <p>
+                Trabalhamos com marcas consagradas e atendimento especializado para garantir que cada acorde soe como
+                você sempre sonhou.
+            </p>
+        </div>
+        <img src="imagens/JimmyPage.jpg" alt="Jimmy Page tocando guitarra" class="sobre-imagem" loading="lazy">
+    </section>
 
-    <img src="imagens/JimmyPage.jpg" alt="Jimmy Page" class="sobre-imagem">
-  </div>
+    <section class="banner">
+        <h1>Conheça nossas guitarras iradas!</h1>
+        <p>Da clássica Stratocaster à poderosa Les Paul — encontre o som que combina com o seu estilo.</p>
+    </section>
 
+    <section id="produtos-destaque">
+        <article class="produto" data-id="1" data-nome="Gibson Les Paul Standard" data-preco="8499.00">
+            <img src="produtos/guitarras/les paul/lespaulsunburst.png" alt="Gibson Les Paul Standard" loading="lazy">
+            <h3>Gibson Les Paul Standard</h3>
+            <p>Som encorpado, sustain lendário e visual clássico.</p>
+            <p><strong>R$ 8.499,00</strong></p>
+            <button type="button" class="add-to-cart">Adicionar ao carrinho</button>
+        </article>
+        <article class="produto" data-id="2" data-nome="Fender Stratocaster" data-preco="7899.00">
+            <img src="produtos/guitarras/stratocaster/stratosunburst.png" alt="Fender Stratocaster" loading="lazy">
+            <h3>Fender Stratocaster</h3>
+            <p>Versatilidade total e timbre cristalino.</p>
+            <p><strong>R$ 7.899,00</strong></p>
+            <button type="button" class="add-to-cart">Adicionar ao carrinho</button>
+        </article>
+        <article class="produto" data-id="3" data-nome="Fender Telecaster" data-preco="6299.00">
+            <img src="produtos/guitarras/telecaster/telesunburst.png" alt="Fender Telecaster" loading="lazy">
+            <h3>Fender Telecaster</h3>
+            <p>Perfeita para solos rápidos e timbres pesados.</p>
+            <p><strong>R$ 6.299,00</strong></p>
+            <button type="button" class="add-to-cart">Adicionar ao carrinho</button>
+        </article>
+    </section>
 
-  <!-- Seção de destaque -->
-  <section class="banner">
-    <h1>Conheça nossas guitarras iradas!</h1>
-    <p>Da clássica Stratocaster à poderosa Les Paul — encontre o som que combina com o seu estilo.</p>
-  </section>
- 
-  <!-- Produtos em destaque -->
-  <section id="produtos-destaque">
-    <div class="produto">
-        <img src="produtos/guitarras/les paul/lespaulsunburst.png" alt="Gibson Les Paul">
-        <h3>Gibson Les Paul Standard</h3>
-        <p>Som encorpado, sustain lendário e visual clássico.</p>
-        <p><strong>R$ 8.499,00</strong></p>
-        <button>Adicionar ao carrinho</button>
-    </div>
-    <div class="produto">
-        <img src="produtos/guitarras/stratocaster/stratosunburst.png" alt="Stratocaster">
-        <h3>Fender Stratocaster</h3>
-        <p>Versatilidade total e timbre cristalino.</p>
-        <p><strong>R$ 7.899,00</strong></p>
-        <button>Adicionar ao carrinho</button>
-    </div>
-    <div class="produto">
-        <img src="produtos/guitarras/telecaster/telesunburst.png" alt="Telecaster">
-        <h3>Fender Telecaster</h3>
-        <p>Perfeita para solos rápidos e timbres pesados.</p>
-        <p><strong>R$ 6.299,00</strong></p>
-        <button>Adicionar ao carrinho</button>
-    </div>
-  </section>
- 
-  <!-- Vantagens --> 
-  <section id="vantagens">
-    <h2>Por que escolher a Guitas?</h2>
-    <ul>
-      <li>🎸 Entrega rápida e segura em todo o Brasil</li>
-      <li>💳 Parcelamento em até 12x sem juros</li>
-      <li>🔧 Garantia estendida de 1 ano</li>
-      <li>🎧 Suporte especializado para te ajudar a escolher o instrumento ideal</li>
-    </ul>
-  </section>
+    <section id="vantagens">
+        <h2>Por que escolher a Guitas?</h2>
+        <ul>
+            <li>🎸 Entrega rápida e segura em todo o Brasil</li>
+            <li>💳 Parcelamento em até 12x sem juros</li>
+            <li>🔧 Garantia estendida de 1 ano</li>
+            <li>🎧 Suporte especializado para te ajudar a escolher o instrumento ideal</li>
+        </ul>
+    </section>
 
-  <!-- Chamada final -->
-  <section id="cta-final">
-    <h2>Pronto para tocar alto?</h2>
-    <p>Descubra o instrumento perfeito e leve seu som a outro nível.</p>
-    <button>Ver todos os produtos</button>
-  </section>
+    <section id="cta-final">
+        <h2>Pronto para tocar alto?</h2>
+        <p>Descubra o instrumento perfeito e leve seu som a outro nível.</p>
+        <a href="produtos.html" class="btn">Ver todos os produtos</a>
+    </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 Guitas. Som além das cordas.</p>
+    <p>&copy; 2025 Guitas. Som além das cordas.</p>
 </footer>
 
 </body>

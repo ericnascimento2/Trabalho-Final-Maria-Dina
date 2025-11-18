@@ -5,33 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitas: Login</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <h1><a href="pginicial.html">Guitas</a></h1>
-    </header>
+<header>
+    <h1><a href="pginicial.html">Guitas</a></h1>
 
-    <main>
-        <section id="login-form">
-            <h2>Acessar sua Conta</h2>
-            <form>
-                <label for="email-login">E-mail:</label>
-                <input type="email" id="email-login" name="email-login" required>
-                
-                <label for="senha-login">Senha:</label>
-                <input type="password" id="senha-login" name="senha-login" required>
-                
-                <button type="submit">Entrar</button>
-            </form>
-            <p>Não tem uma conta? <a href="#">Cadastre-se aqui</a>.</p>
-        </section>
-    </main>
+    <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+            <li><a href="pginicial.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
 
-    <footer>
-        <p>&copy; 2025 Nome da Loja. Todos os direitos reservados.</p>
-    </footer>
+    <div class="utility-nav">
+        <button type="button" class="search-toggle" aria-label="Abrir busca" aria-expanded="false">
+            <img src="icones/pesquisar.png" alt="" class="nav-image">
+        </button>
+        <div class="search-container" id="search-box">
+            <input type="text" id="search-input" placeholder="Pesquisar..." aria-label="Buscar produtos">
+        </div>
+
+        <a href="carrinho.html" class="cart-icon" aria-label="Carrinho de compras">
+            <img src="icones/carrinho.png" alt="" class="nav-image">
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+
+        <a href="login.html" class="login-link">
+            <img src="icones/usuario.png" alt="" class="nav-image login-icon">
+            <span>Login</span>
+        </a>
+    </div>
+</header>
+
+<main class="wrapper">
+    <section id="login-form">
+        <h2>Acessar sua Conta</h2>
+        <form id="form-login">
+            <label for="email-login">E-mail:</label>
+            <input type="email" id="email-login" name="email-login" required>
+
+            <label for="senha-login">Senha:</label>
+            <input type="password" id="senha-login" name="senha-login" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a>.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Guitas. Som além das cordas.</p>
+</footer>
 
 </body>
 </html>
