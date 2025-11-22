@@ -5,58 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitas: Carrinho</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-    <header>
-        <h1><a href="pginicial.html">Guitas</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Continuar Comprando</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1><a href="pginicial.html">Guitas</a></h1>
 
-    <main>
+    <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+            <li><a href="pginicial.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="utility-nav">
+        <button type="button" class="search-toggle" aria-label="Abrir busca" aria-expanded="false">
+            <img src="icones/pesquisar.png" alt="" class="nav-image">
+        </button>
+        <div class="search-container" id="search-box">
+            <input type="text" id="search-input" placeholder="Pesquisar..." aria-label="Buscar produtos">
+        </div>
+
+        <a href="carrinho.html" class="cart-icon" aria-label="Carrinho de compras">
+            <img src="icones/carrinho.png" alt="" class="nav-image">
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+
+        <a href="login.html" class="login-link">
+            <img src="icones/usuario.png" alt="" class="nav-image login-icon">
+            <span>Login</span>
+        </a>
+    </div>
+</header>
+
+<main class="wrapper">
+    <section id="itens-carrinho">
         <h2>Seu Carrinho de Compras</h2>
+        <div id="carrinho-lista"></div> <!-- Itens carregados via JS -->
+    </section>
 
-        <section id="itens-carrinho">
-            <article class="item">
-                <img src="placeholder.jpg" alt="Produto 1">
-                <div>
-                    <h4>Produto 1</h4>
-                    <p>Preço: R$ 99,90</p>
-                    <label for="quantidade1">Quantidade:</label>
-                    <input type="number" id="quantidade1" value="1" min="1">
-                    <button>Remover</button>
-                </div>
-            </article>
-            
-            <article class="item">
-                <img src="placeholder.jpg" alt="Produto 2">
-                <div>
-                    <h4>Produto 2</h4>
-                    <p>Preço: R$ 149,90</p>
-                    <label for="quantidade2">Quantidade:</label>
-                    <input type="number" id="quantidade2" value="1" min="1">
-                    <button>Remover</button>
-                </div>
-            </article>
-        </section>
+    <section id="resumo-carrinho">
+        <h3>Resumo do Pedido</h3>
+        <p id="subtotal">Subtotal: R$ 0,00</p>
+        <p>Frete: A calcular</p>
+        <h4 id="total">Total: R$ 0,00</h4>
+        <a href="compra.html" class="btn">Finalizar Compra</a>
+    </section>
+</main>
 
-        <section id="resumo-carrinho">
-            <h3>Resumo do Pedido</h3>
-            <p>Subtotal: R$ 249,80</p>
-            <p>Frete: A calcular</p>
-            <h4>Total: R$ 249,80</h4>
-            <a href="compra.html"><button>Finalizar Compra</button></a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Nome da Loja. Todos os direitos reservados.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Guitas. Som além das cordas.</p>
+</footer>
 
 </body>
 </html>
