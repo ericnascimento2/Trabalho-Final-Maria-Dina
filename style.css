@@ -157,6 +157,7 @@ section {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+
 .banner {
     padding: 40px;
     text-align: center;
@@ -360,4 +361,228 @@ footer {
     .utility-nav {
         margin-top: 1rem;
     }
+}
+
+/* ===== SEÇÃO DE DESTAQUES GRANDES ===== */
+.destaques-grandes {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 4rem 2rem;
+    background-color: #FBF5E4;
+}
+
+.destaque-bloco {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+/* Alternar lado da imagem automaticamente */
+.destaque-bloco:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.destaque-texto {
+    flex: 1;
+    min-width: 320px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.destaque-texto h2 {
+    font-size: 2.2rem;
+    margin: 0.5rem 0 1rem;
+    color: #70307A;
+}
+
+.tag-destaque {
+    background: #c00;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.especificacoes {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+    color: #444;
+}
+
+.especificacoes li {
+    margin-bottom: 0.5rem;
+}
+
+.preco-destaque {
+    margin: 2rem 0;
+}
+
+.preco-destaque strong {
+    font-size: 2.4rem;
+    color: #70307A;
+}
+
+.parcela {
+    display: block;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.botoes-destaque {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.btn-principal {
+    background-color: #70307A;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-secundario {
+    background: transparent;
+    color: #70307A;
+    border: 2px solid #70307A;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-principal:hover { background: #101848; }
+.btn-secundario:hover { background: #70307A; color: white; }
+
+.destaque-imagem {
+    flex: 1;
+    min-width: 350px;
+    max-width: 650px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .destaque-bloco,
+    .destaque-bloco:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+    .destaque-imagem {
+        max-width: 80%;
+    }
+}
+
+/* DESTAQUES MELHORADOS */
+.produto.destacado {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.produto.destacado:hover {
+    transform: translateY(-10px);
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #c00;
+    color: white;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.parcela {
+    font-size: 0.9em;
+    color: #70307A;
+    display: block;
+    margin-top: 5px;
+}
+
+/* VANTAGENS EXPANDIDA */
+.vantagens-expandida {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.grid-vantagens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vantagem-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.vantagem-item .emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* CTA EXPANDIDO */
+.cta-expandido {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: linear-gradient(135deg, #70307A, #101848);
+    color: white;
+    border-radius: 12px;
+    margin: 4rem 1rem;
+}
+
+.cta-expandido h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.cta-expandido p {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.cta-botoes {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-grande {
+    font-size: 1.4rem;
+    padding: 1.2rem 3rem;
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid white !important;
+}
+
+/* RESPONSIVO AJUSTES */
+@media (max-width: 768px) {
+    .cta-expandido h2 { font-size: 2.2rem; }
+    .cta-expandido p { font-size: 1.2rem; }
+    .grid-vantagens { grid-template-columns: 1fr; }
 }
