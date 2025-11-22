@@ -162,8 +162,15 @@ section {
     text-align: center;
 }
 
-/* SOBRE */
-.sobre-container {
+/* CONTAINER GERAL */
+#sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* CADA BLOCO DO SOBRE */
+.sobre-bloco {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -171,6 +178,12 @@ section {
     flex-wrap: wrap;
 }
 
+/* ALTERNAR LADOS AUTOMATICAMENTE */
+.sobre-bloco:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* TEXTO */
 .sobre-texto {
     flex: 1;
     min-width: 280px;
@@ -178,6 +191,14 @@ section {
     line-height: 1.6;
 }
 
+.sobre-texto h2 {
+    margin-bottom: 10px;
+    font-size: 22pt;
+    font-weight: bold;
+    color: #70307A;
+}
+
+/* IMAGEM */
 .sobre-imagem {
     flex: 1;
     max-width: 600px;
@@ -186,6 +207,7 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* LOGO */
 .logo-text {
     font-family: "Lobster", cursive;
     font-weight: bold;
